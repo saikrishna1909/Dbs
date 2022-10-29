@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Payment</title>
+        <style type="text/css">
+            .dbs {
+                background-color:cyan;
+                border-style:inset;
+            }
+            .payment{
+                color:brown;
+                text-align:center;
+                font-family: Cambria;
+            }
+            .start{
+                border-style: groove;
+            }
+            .CreditCard{
+                border-style:double ;
+            }
+            .DebitCard{
+                border-style:double;
+            }
+        </style>
+        <script type="text/javascript">
+           function  validataAccountNumCred(){
+            var acc_hold_name=document.credit_card.getElementById("user_name").value;
+            var account_num=parseInt(document.credit_card.getElementById("acc_num").value);
+            alert(acc_hold_name+account_num);
+            }
+            function  validataAccountNumDeb(){
+            var acc_hold_name=document.credit_card.getElementById("user_name").value;
+            var account_num=parseInt(document.credit_card.getElementById("acc_num").value);
+            alert(acc_hold_name+account_num);
+            }
+        </script>
+    </head>
+    <body >
+       <div class="start">
+        <img style="float:left" src="logo.png" width="100px" height="80px"> <h1 class="payment" style="align:center">Payment</h1></div><br><br><br><br><br><br>
+        <div class= 'dbs'>
+
+            <form  class="CreditCard" name="credit_card" onsubmit= "validataAccountNumCred()" style="float:inherit">
+                <h1>Payment Through Credit Card</h1>
+                <div class="ClassCredit" name="CreditCard">
+                    <div>
+                        <label>Bank Name:   </label> <select id ="Bank_name">
+                             <option value="SBI">SBI</option>
+                             <option value="Canara Bank">Canara Bank</option>
+                             <option value="Kotak Mahendra">Kotak Mahendra</option>
+                             <option value="Cooperative Bank">Cooperative bank</option>
+                             <option value="DBS Payment Bank">DBS Payment Bank</option>
+                         </select><br><br>
+                 </div>
+                 <div>
+                    <label>User Name</label><input type="text" id="acc_num"/><br><br>
+                        <label>Account Number:</label> <input type="text" id="acc_num" / ></div><br><br>
+                      <div>   <label>Amount:  </label><input type="text" id="amount"  ></div><br>
+                        <a href=""> <input type="submit" id="submit_button" value="Make Payment"></a><br>
+                </div>
+                </form>
+                <hr>
+                <form class="DebitCard" name="debit_card" onsubmit= "validataAccountNumDeb()">
+                <h1>Payment Through Debit Card</h1>
+                <div id="DebitCard" name="DebitCard">
+                <div>
+               <label>Bank Name:</label> <select id ="Bank_name">
+                    <option value="SBI">SBI</option>
+                    <option value="Canara Bank">Canara Bank</option>
+                    <option value="Kotak Mahendra">ICICI</option>
+                    <option value="Cooperative Bank">Cooperative bank</option>
+                    <option value="DBS Payment Bank">DBS Payment Bank</option>
+                </select>
+        </div><br><br>
+        <div>
+                <label>User Name</label><input type="text" id=""acc_num/><br><br>
+               <label>Account Number:</label> <input type="text" id="acc_num" /></div><br><br>
+             <div>   <label>Amount:</label><input type="text" id="amount" name ="Amount" /></div><br><br>
+              <a href=""><input type="submit" id="submit_button" value="Make Payment"/></a></div>
+               <br>
+            
+             </form>
+
+    </body>
+
+    </body>
+</html>
